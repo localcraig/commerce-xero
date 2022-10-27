@@ -287,7 +287,7 @@ class XeroAPI extends Component
         $invoice->setStatus('AUTHORISED')
             ->setType('ACCREC')
             ->setContact($contact)
-            ->setLineAmountType("Exclusive") // TODO: this should be optional (Inclusive/Exclusive)
+            ->setLineAmountType("Inclusive") // TODO: this should be optional (Inclusive/Exclusive)
             ->setCurrencyCode($order->getPaymentCurrency())
             ->setInvoiceNumber($order->reference)
             ->setSentToContact(true)
